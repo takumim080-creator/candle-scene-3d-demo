@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#151917">
+  <meta name="description" content="CANDLE SCENE — 同じ3m角の部屋と一本のキャンドルを手動で見せるConcept 3D試作">
+  <title>CANDLE SCENE — Presentation prototype</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='15' width='12' height='14' rx='2' fill='%23274136'/%3E%3Cpath d='M16 2Q9 14 16 14Q23 14 16 2' fill='%23e3bd7b'/%3E%3C/svg%3E">
+  <script type="module" crossorigin src="./assets/index-CAg6W8ZY.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DTD8uL7O.css">
+</head>
+<body>
+  <main id="app">
+    <header class="app-header">
+      <div class="wordmark">CANDLE SCENE<span>3D PRESENTATION PROTOTYPE</span></div>
+      <div class="header-right"><span class="reference">D’ORSAY REFERENCE MODEL</span><button id="detail" title="既存CAM_06の接写を表示">DETAIL VIEW</button><button id="fullscreen" title="全画面表示 (F)">FULL SCREEN <span>↗</span></button></div>
+    </header>
+    <section id="stage-wrap" aria-label="3Dプレゼン">
+      <div id="stage">
+        <div id="render-host"></div>
+        <div id="fade"></div>
+        <div id="overlay"></div>
+        <div id="detail-note" hidden>DETAIL / CAM_06 <span>無銘容器・仮寸法・同じHero</span></div>
+        <div id="scene-label"><span id="scene-number">00</span><span id="scene-title">ARRIVAL / KEY VISUAL</span></div>
+        <div id="fallback-panel" hidden>
+          <p class="eyebrow">BACKUP PRESENTATION</p>
+          <h1>3D表示を利用できないため、<br>バックアップ映像を使用してください</h1>
+          <p>映像はオフライン版と同じフォルダの fallback にあります。</p>
+          <div class="backup-links"><a href="fallback/PREVIEW_12s.mp4">12秒予告</a><a href="fallback/CANDLE_SCENE_28s.mp4">28秒デモ</a><a href="fallback/DAY.png">DAY</a><a href="fallback/SUNSET.png">SUNSET</a><a href="fallback/NIGHT.png">NIGHT</a></div>
+          <button id="backup-watch">28秒デモをここで再生</button><video id="backup-video" controls playsinline preload="none" hidden></video>
+        </div>
+      </div>
+    </section>
+    <footer class="app-footer">
+      <div class="control-row">
+        <div class="nav-controls"><button id="prev" title="前の段階 (←)">← PREV</button><button id="next" class="primary" title="次の段階 (→)">NEXT →</button></div>
+        <div class="demo-controls"><button id="start" title="デモ開始・再開 (Space)">▶ DEMO START</button><button id="stop" title="その場で停止 (S)">Ⅱ DEMO STOP</button></div>
+        <div id="playback" aria-live="polite"><span id="playback-state">MANUAL</span><span id="playback-time"></span><div id="progress"><i></i></div></div>
+        <button id="ending" title="夜の終了画面へ (E)">ENDING RETURN ↩</button>
+      </div>
+      <div class="footnote"><span>3D CONCEPT ／ 実測前 ／ 正式採用・連携未定</span><span>火気・食品・機材・定員は未承認 ／ 炎はCG</span><span id="render-status">ローカル描画 · 音声OFF</span></div>
+    </footer>
+  </main>
+</body>
+</html>
